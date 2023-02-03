@@ -1,5 +1,7 @@
 # K3s Ansible Playbook
 
+[Fix Metrics server](https://signoz.io/blog/kubernetes-metrics-server)
+
 ## System requirements
 
 Deployment environment must have Ansible 2.4.0+
@@ -40,5 +42,5 @@ ansible-playbook site.yml -i inventory/my-cluster/hosts.ini
 To get access to your **Kubernetes** cluster just
 
 ```bash
-scp debian@master_ip:~/.kube/config ~/.kube/config
+scp rocky@master_ip:~/.kube/config ~/.kube/config
 ```
