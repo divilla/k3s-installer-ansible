@@ -13,6 +13,7 @@ First create a new directory based on the `sample` directory within the `invento
 
 ```bash
 cp -R inventory/sample inventory/my-cluster
+sudo dnf install rhel-system-roles
 ```
 
 Second, edit `inventory/my-cluster/hosts.ini` to match the system information gathered above. For example:
@@ -35,6 +36,7 @@ Start provisioning of the cluster using the following command:
 
 ```bash
 ansible-playbook site.yml -i inventory/my-cluster/hosts.ini
+ansible-playbook timesync.yml -i inventory/my-cluster/hosts.ini
 ```
 
 ## Kubeconfig

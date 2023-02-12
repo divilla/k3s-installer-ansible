@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  gather_facts: false
+  become: true
+  vars:
+    timesync_ntp_servers:
+      - hostname: ptbtime1.ptb.de
+        iburst: yes
+        pool: yes
+        nts: yes
+  roles:
+    - /usr/share/ansible/roles/rhel-system-roles.timesync
